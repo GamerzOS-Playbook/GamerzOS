@@ -19,6 +19,9 @@
 </p>
 
   
+### 🤔 What is GamerzOS?
+GamerzOS Is a Windows Moded Playbook. Witch Spatially Ddesign For Gamers. For Best Gaming Experience This OS Was Devoloped.
+
 ### 📈 Optimized Performance
 
 
