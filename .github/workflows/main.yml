@@ -29,4 +29,5 @@ jobs:
           name: 0.1
           files: GamerzOS.apbx
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          run: |
