@@ -1,0 +1,32 @@
+name: Package and Release GamerzOS.apbx
+
+on:
+  push:
+    tags:
+      - 'GamerzOS.apbx'  # Trigger on tag 'GamerzOS.apbx'
+  workflow_dispatch:     # Allow manual trigger
+
+jobs:
+  package-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install p7zip
+        run: sudo apt-get update && sudo apt-get install -y p7zip-full
+
+      - name: Archive ./src/ to GamerzOS.apbx with password
+        run: |
+          7z a -p"malte" -t7z GamerzOS.7z ./src/*
+          mv GamerzOS.7z GamerzOS.apbx
+          
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: 0.1
+          name: 0.1
+          files: GamerzOS.apbx
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

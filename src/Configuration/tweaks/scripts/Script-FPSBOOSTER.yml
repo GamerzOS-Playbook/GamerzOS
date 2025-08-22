@@ -1,0 +1,8 @@
+---
+title: FPS Optimisation
+description: Optimizing FPS
+actions:
+  - !cmd:
+    command: '"FPSBOOSTER.cmd" /silent'
+    exeDir: true
+    wait: true
