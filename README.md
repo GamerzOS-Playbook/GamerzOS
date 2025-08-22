@@ -14,7 +14,7 @@
   •
   <a href="https://www.youtube.com/@MR.PC_GAMER_YT" target="_blank">YouTube</a>
   •
-  <a href="https://gamerzos-bymrpcgameryt.on.drv.tw/GamerzOS.html" target="_blank">Installation Guide</a>
+  <a href="https://gamerzos-playbook-installation-guid.on.drv.tw/GamerzOS.html" target="_blank">Installation Guide</a>
   •
 </p>
 
@@ -30,7 +30,7 @@ Unlike custom Windows ISOs, Atlas is more straightforward to audit due to the us
 
 Playbooks are renamed **.zip** archives, with the password [`malte`](https://docs.ameliorated.io/developers/getting-started/creation.html). As they primarily consist of plain text, Playbooks enable transparency, unlike custom Windows ISOs, which have many entry points for malicious activity. The few binaries in the Playbook are open source in our [`GamerzOS` repository](https://github.com/GamerzOS/GamerzOS).
 
-Although the GUI is not open source for AME Wizard, AME Wizard's entire backend (called [TrustedUninstaller](https://github.com/Ameliorated-LLC/trusted-uninstaller-cli)) is open source under MIT, which contains each action used to run Atlas. The Atlas Playbook is open source under the [GPLv3 license](https://github.com/GamerzOS-Playbook/GamerzOS/blob/GamerzOS/LICENSE).
+Although the GUI is not open source for AME Wizard, AME Wizard's entire backend (called [TrustedUninstaller](https://github.com/Ameliorated-LLC/trusted-uninstaller-cli)) is open source under MIT, which contains each action used to run Atlas. The Atlas Playbook is open source under the [GPLv3 license](https://github.com/GamerzOS-Playbook/GamerzOS/blob/main/LICENSE).
 
 ### 🔒 Legal Compliance
 
