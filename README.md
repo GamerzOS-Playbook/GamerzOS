@@ -14,7 +14,7 @@
   •
   <a href="https://www.youtube.com/@MR.PC_GAMER_YT" target="_blank">YouTube</a>
   •
-  <a href="https://gamerzos-playbook-installation-guid.on.drv.tw/GamerzOS.html" target="_blank">Installation Guide</a>
+  <a href="https://gamerzos-playbook.github.io/GamerzOS-Installation-Guid/" target="_blank">Installation Guide</a>
   •
 </p>
 
