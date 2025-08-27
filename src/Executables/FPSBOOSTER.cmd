@@ -8,6 +8,7 @@ if %errorlevel% neq 0 (
     pause
     exit
 )
+regedit.exe /s "RemoveDefender.reg"
 :: Admin privileges confirmed, continue execution
 setlocal EnableExtensions DisableDelayedExpansion
 echo -- Uninstalling Microsoft Store
