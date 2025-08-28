@@ -54,5 +54,5 @@ Please note that some issues may not be rectifiable by us. If you come across a 
 ### Cridits
 
 
-@xyueta, @radnotred, @mrpcgameryt
+@xyueta, @radnotred, @mrpcgameryt.
 </body>
