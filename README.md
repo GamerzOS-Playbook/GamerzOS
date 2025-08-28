@@ -14,7 +14,7 @@
   •
   <a href="https://www.youtube.com/@MR.PC_GAMER_YT" target="_blank">YouTube</a>
   •
-  <a href="https://gamerzos-playbook.github.io/GamerzOS-Installation-Guid/" target="_blank">Installation Guide</a>
+  <a href="https://gamerzos.github.io/GamerzOS-Installation-Guid/" target="_blank">Installation Guide</a>
   •
 </p>
 
@@ -31,9 +31,9 @@ GamerzOS strikes a balance between performance and compatibility. It implements 
 
 Unlike custom Windows ISOs, Atlas is more straightforward to audit due to the use of [AME Wizard](https://ameliorated.io). AME Wizard is controlled by Playbooks, a customizable script-esque system that can perform various tasks.
 
-As they primarily consist of plain text, Playbooks enable transparency, unlike custom Windows ISOs, which have many entry points for malicious activity. The few binaries in the Playbook are open source in our [`GamerzOS` repository](https://github.com/GamerzOS-Playbook/GamerzOS).
+As they primarily consist of plain text, Playbooks enable transparency, unlike custom Windows ISOs, which have many entry points for malicious activity. The few binaries in the Playbook are open source in our [`GamerzOS` repository](https://github.com/GamerzOS/GamerzOS).
 
-Although the GUI is not open source for AME Wizard, AME Wizard's entire backend (called [TrustedUninstaller](https://github.com/Ameliorated-LLC/trusted-uninstaller-cli)) is open source under MIT, which contains each action used to run Atlas. The Atlas Playbook is open source under the [GPLv3 license](https://github.com/GamerzOS-Playbook/GamerzOS/blob/main/LICENSE).
+Although the GUI is not open source for AME Wizard, AME Wizard's entire backend (called [TrustedUninstaller](https://github.com/Ameliorated-LLC/trusted-uninstaller-cli)) is open source under MIT, which contains each action used to run Atlas. The Atlas Playbook is open source under the [GPLv3 license](https://github.com/GamerzOS/GamerzOS/blob/main/LICENSE).
 
 ### 🔒 Legal Compliance
 
@@ -54,5 +54,5 @@ Please note that some issues may not be rectifiable by us. If you come across a 
 ### Cridits
 
 
-@xyueta, @radnotred, @gamerzos
+@xyueta, @radnotred, @mrpcgameryt
 </body>
