@@ -19,4 +19,5 @@ net session >nul 2>&1 || (
     color 6
     echo Notifications are turned off.
 
-pause
+exit
+
