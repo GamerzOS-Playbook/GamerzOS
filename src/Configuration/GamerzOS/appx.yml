@@ -69,10 +69,20 @@ actions:
   # Removing using AME Wizard causes issues with Cross Device Experience Host installing
   - !powerShell:
     command: |
+       Get-AppxPackage *MicrosoftEdge* | Remove-AppxPackage
+        Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -eq 'MicrosoftEdge' } | Remove-AppxProvisionedPackage -Online
+    runas: currentUserElevated
+    wait: true
+
+    
+  - !powerShell:
+    command: |
        Get-AppxPackage *windowsstore* | Remove-AppxPackage
        Get-AppxProvisionedPackage -Online | Where-Object { $_.DisplayName -eq 'windowsstore' } | Remove-AppxProvisionedPackage -Online
     runas: currentUserElevated
     wait: true
+
+    
   # - !appx: {name: 'Microsoft.YourPhone*', type: family}
   - !powerShell:
     command: |
