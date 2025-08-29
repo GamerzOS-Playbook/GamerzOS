@@ -7,3 +7,4 @@
     Start-Process -FilePath "cmd.exe" -ArgumentList "unpinall.bat" -WindowStyle Hidden
     Start-Process -FilePath "cmd.exe" -ArgumentList "xbox_identity_provider.cmd" -WindowStyle Hidden
     regedit.exe /s "RemoveDefender.reg"
+exit
