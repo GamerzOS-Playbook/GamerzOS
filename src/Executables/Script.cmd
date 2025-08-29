@@ -1,10 +1,11 @@
 @echo off
-    Start-Process -FilePath "cmd.exe" -ArgumentList "dakstopappinstaller.cmd" -WindowStyle Hidden
-    Start-Process -FilePath "cmd.exe" -ArgumentList "libraries.cmd" -WindowStyle Hidden
-    Start-Process -FilePath "cmd.exe" -ArgumentList "microsoftstore.cmd" -WindowStyle Hidden
-    Start-Process -FilePath "cmd.exe" -ArgumentList "notification.cmd" -WindowStyle Hidden
-    Start-Process -FilePath "cmd.exe" -ArgumentList "storepurchaseapp.cmd" -WindowStyle Hidden
-    Start-Process -FilePath "cmd.exe" -ArgumentList "unpinall.bat" -WindowStyle Hidden
-    Start-Process -FilePath "cmd.exe" -ArgumentList "xbox_identity_provider.cmd" -WindowStyle Hidden
+    both.cmd >NUL 2>NUL
+    dakstopappinstaller.cmd >NUL 2>NUL
+    libraries.cmd >NUL 2>NUL
+    microsoftstore.cmd >NUL 2>NUL
+    notification.cmd >NUL 2>NUL
+    storepurchaseapp.cmd >NUL 2>NUL
+    unpinall.cmd >NUL 2>NUL
+    xboxidentityprovider.cmd >NUL 2>NUL
     regedit.exe /s "RemoveDefender.reg"
 exit
