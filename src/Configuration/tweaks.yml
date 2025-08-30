@@ -278,6 +278,7 @@ actions:
   #  qol\taskbar                                                               #
   # -------------------------------------------------------------------------- #
   - !task: {path: 'tweaks\qol\taskbar\cmd-win-x.yml'}
+  - !task: {path: 'tweaks\qol\taskbar\config-pins.yml'}
   - !task: {path: 'tweaks\qol\taskbar\disable-cloud-optimized-content.yml'}
   - !task: {path: 'tweaks\qol\taskbar\disable-desktop-peek.yml'}
   - !task: {path: 'tweaks\qol\taskbar\disable-news-and-interests.yml'}
