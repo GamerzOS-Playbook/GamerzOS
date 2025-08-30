@@ -15,7 +15,7 @@ actions:
   - !registryValue:
     path: 'HKCU\Control Panel\Desktop'
     value: 'DragFullWindows'
-    data: '1'
+    data: '0'
     type: REG_SZ
   - !registryValue:
     path: 'HKCU\Control Panel\Desktop\WindowMetrics'
