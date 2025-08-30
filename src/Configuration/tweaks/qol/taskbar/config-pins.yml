@@ -29,32 +29,3 @@ actions:
     value: 'CopilotPWAPin'
     data: '0'
     type: REG_DWORD
-    # Not sure what this does
-  # - !registryValue:
-  #   path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband\AuxilliaryPins'
-  #   value: 'TFLPin'
-  #   data: '0'
-  #   type: REG_DWORD
-
-    # Set new pins
-  - !powerShell:
-    command: '.\TASKBARPINS.ps1'
-    option: '!install-another-browser'
-    exeDir: true
-  - !powerShell:
-    command: ".\\TASKBARPINS.ps1 'Brave'"
-    option: 'browser-brave'
-    exeDir: true
-  - !powerShell:
-    command: ".\\TASKBARPINS.ps1 'Firefox'"
-    option: 'browser-firefox'
-    exeDir: true
-  - !powerShell:
-    command: ".\\TASKBARPINS.ps1 'Google Chrome'"
-    option: 'browser-chrome'
-    exeDir: true
-  - !powerShell:
-    command: ".\\TASKBARPINS.ps1 'LibreWolf'"
-    option: 'browser-librewolf'
-    exeDir: true
-  - !run: {exe: 'explorer.exe', runas: 'currentUser', wait: false}
