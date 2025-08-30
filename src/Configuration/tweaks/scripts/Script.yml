@@ -1,6 +1,6 @@
 ---
-title: FPS Optimisation
-description: Optimizing FPS
+title: Script
+description: Script
 actions:
   - !cmd:
     command: '"Script.cmd" /silent'
