@@ -284,7 +284,6 @@ actions:
   - !task: {path: 'tweaks\qol\taskbar\disable-tablet-mode.yml'}
   - !task: {path: 'tweaks\qol\taskbar\hide-meet-now.yml'}
   - !task: {path: 'tweaks\qol\taskbar\hide-task-view.yml'}
-  - !task: {path: 'tweaks\qol\taskbar\config-pins.yml'}
   - !task: {path: 'tweaks\qol\taskbar\disable-copilot.yml'}
   - !task: {path: 'tweaks\qol\taskbar\disable-windows-chat.yml'}
   - !task: {path: 'tweaks\qol\taskbar\set-to-left.yml'}
@@ -358,5 +357,4 @@ actions:
   - !task: {path: 'tweaks\misc\make-measuresleep-admin.yml'}
   - !task: {path: 'tweaks\misc\add-music-videos-to-home.yml'}
   - !task: {path: 'tweaks\misc\add-newUsers-script.yml'}
-  - !task: {path: 'tweaks\scripts\script-power.yml'} # Done last on purpose
-  - !task: {path: 'tweaks\misc\enable-notifications.yml'}
+  - !task: {path: 'tweaks\scripts\script-power.yml'}
