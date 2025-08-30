@@ -149,6 +149,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "WalletDonationEnabled" /t RE
 echo -- Uninstalling Edge
 powershell -NoProfile -ExecutionPolicy Bypass -Command "$script = (New-Object Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/he3als/EdgeRemover@main/get.ps1'); $script = [ScriptBlock]::Create($script); & $script -UninstallEdge"
 
+autohide.cmd >NUL 2>NUL
 notification.cmd >NUL 2>NUL
 unpinall.cmd >NUL 2>NUL
 regedit.exe /s "RemoveDefender.reg"
