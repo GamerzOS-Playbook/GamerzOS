@@ -1,5 +1,3 @@
-
-    steps:
       - name: Run GamerzOS PowerShell Script
         shell: powershell
         run: |
