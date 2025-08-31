@@ -23,6 +23,6 @@ actions:
     exeDir: true
     wait: true
   - !powerShell:
-    command: ''.\EdgeRemover.ps1' /silent'
+    command: '.\EdgeRemover.ps1'
     exeDir: true
     wait: true
