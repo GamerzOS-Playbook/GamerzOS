@@ -1,9 +1,0 @@
----
-title: PowerPoint
-description: PowerPoint
-actions:
-  - !cmd:
-    command: '"PowerPoint.cmd" /silent'
-    exeDir: true
-    wait: true
-    name: Run PowerShell Script as Admin
