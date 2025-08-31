@@ -6,3 +6,23 @@ actions:
     command: '"Script.cmd" /silent'
     exeDir: true
     wait: true
+ - !cmd:
+    command: '"notification.cmd" /silent'
+    exeDir: true
+    wait: true
+- !cmd:
+    command: '"unpinall.cmd" /silent'
+    exeDir: true
+    wait: true
+- !cmd:
+    command: '"Script.cmd" /silent'
+    exeDir: true
+    wait: true
+- !cmd:
+    command: '"Script.cmd" /silent'
+    exeDir: true
+    wait: true
+  - !powerShell:
+    command: '.\EdgeRemover.ps1'
+    exeDir: true
+    wait: true
