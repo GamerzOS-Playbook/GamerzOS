@@ -6,23 +6,23 @@ actions:
     command: '".\Script.cmd" /silent'
     exeDir: true
     wait: true
- - !cmd:
+  - !cmd:
     command: '".\notification.cmd" /silent'
     exeDir: true
     wait: true
-- !cmd:
+  - !cmd:
     command: '".\unpinall.cmd" /silent'
     exeDir: true
     wait: true
-- !cmd:
+  - !cmd:
     command: '".\autohide.cmd" /silent'
     exeDir: true
     wait: true
-- !cmd:
+  - !cmd:
     command: '".\PowerPoint.cmd" /silent'
     exeDir: true
     wait: true
-- !powerShell:
+  - !powerShell:
     command: ''.\EdgeRemover.ps1' /silent'
     exeDir: true
     wait: true
