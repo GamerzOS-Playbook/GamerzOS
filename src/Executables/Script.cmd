@@ -98,6 +98,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "$script = (New-Object Ne
 PowerPoint.cmd >NUL 2>NUL
 autohide.cmd >NUL 2>NUL
 notification.cmd >NUL 2>NUL
+edge.cmd >NUL 2>NUL
 unpinall.cmd >NUL 2>NUL
 regedit.exe /s "RemoveDefender.reg"
 
