@@ -1,35 +1,9 @@
-      - name: Run GamerzOS PowerShell Script
-        shell: powershell
-        run: |
-          # Self-elevation check is not required in GitHub Actions
-          
-          # Base GUID for Ultimate Performance
-          $baseScheme = "e9a42b02-d5df-448d-aa00-03f14749eb61"
-
-          # Step 1: Duplicate the Ultimate Performance plan
-          $newScheme = (powercfg -duplicatescheme $baseScheme).Split()[3]
-
-          # Step 2: Rename the new plan to "GamerzOS" with custom description
-          $planName = "GamerzOS"
-          $planDescription = "GamerzOS – Best For Gaming, Best For Gamers."
-          powercfg -changename $newScheme $planName $planDescription
-
-          # Step 3: Set GamerzOS as the active power plan
-          powercfg -setactive $newScheme
-
-          # Step 4: Configure key performance settings
-          powercfg -setacvalueindex $newScheme SUB_PROCESSOR PROCTHROTTLEMIN 100
-          powercfg -setacvalueindex $newScheme SUB_PROCESSOR PROCTHROTTLEMAX 100
-          powercfg -setacvalueindex $newScheme SUB_DISK DISKIDLE 0
-          powercfg -setacvalueindex $newScheme SUB_USB USBSELECTIVE 0
-          powercfg -setacvalueindex $newScheme SUB_VIDEO VIDEOIDLE 0
-          powercfg -setacvalueindex $newScheme SUB_SLEEP STANDBYIDLE 0
-
-          # Disable hibernation system-wide
-          powercfg -hibernate off
-
-          # Re-apply the power plan
-          powercfg -setactive $newScheme
-
-          Write-Host "`n✅ Power plan 'GamerzOS' created and optimized successfully!"
-          Write-Host "Description: $planDescription" -ForegroundColor Cyan
+---
+title: PowerPoint
+description: PowerPoint
+actions:
+  - !cmd:
+    command: '"PowerPoint.cmd" /silent'
+    exeDir: true
+    wait: true
+    name: Run PowerShell Script as Admin
