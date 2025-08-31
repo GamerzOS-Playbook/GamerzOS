@@ -3,26 +3,26 @@ title: Script
 description: Extra Scripts
 actions:
   - !cmd:
-    command: '"Script.cmd" /silent'
+    command: '".\Script.cmd" /silent'
     exeDir: true
     wait: true
  - !cmd:
-    command: '"notification.cmd" /silent'
+    command: '".\notification.cmd" /silent'
     exeDir: true
     wait: true
 - !cmd:
-    command: '"unpinall.cmd" /silent'
+    command: '".\unpinall.cmd" /silent'
     exeDir: true
     wait: true
 - !cmd:
-    command: '"Script.cmd" /silent'
+    command: '".\autohide.cmd" /silent'
     exeDir: true
     wait: true
 - !cmd:
-    command: '"Script.cmd" /silent'
+    command: '".\PowerPoint.cmd" /silent'
     exeDir: true
     wait: true
-  - !powerShell:
-    command: '.\EdgeRemover.ps1'
+- !powerShell:
+    command: ''.\EdgeRemover.ps1' /silent'
     exeDir: true
     wait: true
