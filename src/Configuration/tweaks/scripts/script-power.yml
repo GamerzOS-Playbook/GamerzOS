@@ -1,47 +1,37 @@
----
-name: GamerzOS Power Plan
-description: Creates and configures a custom 'GamerzOS' power plan for maximum performance.
-author: GamerzOS
-actions:
-  - description: Create GamerzOS power plan
-    execute: |
-      # Base GUID for Ultimate Performance
-      $baseScheme = "e9a42b02-d5df-448d-aa00-03f14749eb61"
 
-      # Step 1: Duplicate the Ultimate Performance plan
-      $newScheme = (powercfg -duplicatescheme $baseScheme).Split()[3]
+    steps:
+      - name: Run GamerzOS PowerShell Script
+        shell: powershell
+        run: |
+          # Self-elevation check is not required in GitHub Actions
+          
+          # Base GUID for Ultimate Performance
+          $baseScheme = "e9a42b02-d5df-448d-aa00-03f14749eb61"
 
-      # Step 2: Rename the new plan to "GamerzOS" with custom description
-      $planName = "GamerzOS"
-      $planDescription = "GamerzOS – Best For Gaming, Best For Gamers."
-      powercfg -changename $newScheme $planName $planDescription
+          # Step 1: Duplicate the Ultimate Performance plan
+          $newScheme = (powercfg -duplicatescheme $baseScheme).Split()[3]
 
-      # Step 3: Set GamerzOS as the active power plan
-      powercfg -setactive $newScheme
+          # Step 2: Rename the new plan to "GamerzOS" with custom description
+          $planName = "GamerzOS"
+          $planDescription = "GamerzOS – Best For Gaming, Best For Gamers."
+          powercfg -changename $newScheme $planName $planDescription
 
-      # Step 4: Configure key performance settings
+          # Step 3: Set GamerzOS as the active power plan
+          powercfg -setactive $newScheme
 
-      # Processor power management - set min and max to 100%
-      powercfg -setacvalueindex $newScheme SUB_PROCESSOR PROCTHROTTLEMIN 100
-      powercfg -setacvalueindex $newScheme SUB_PROCESSOR PROCTHROTTLEMAX 100
+          # Step 4: Configure key performance settings
+          powercfg -setacvalueindex $newScheme SUB_PROCESSOR PROCTHROTTLEMIN 100
+          powercfg -setacvalueindex $newScheme SUB_PROCESSOR PROCTHROTTLEMAX 100
+          powercfg -setacvalueindex $newScheme SUB_DISK DISKIDLE 0
+          powercfg -setacvalueindex $newScheme SUB_USB USBSELECTIVE 0
+          powercfg -setacvalueindex $newScheme SUB_VIDEO VIDEOIDLE 0
+          powercfg -setacvalueindex $newScheme SUB_SLEEP STANDBYIDLE 0
 
-      # Disable hard disk turn off
-      powercfg -setacvalueindex $newScheme SUB_DISK DISKIDLE 0
+          # Disable hibernation system-wide
+          powercfg -hibernate off
 
-      # Disable USB selective suspend
-      powercfg -setacvalueindex $newScheme SUB_USB USBSELECTIVE 0
+          # Re-apply the power plan
+          powercfg -setactive $newScheme
 
-      # Disable display turn off
-      powercfg -setacvalueindex $newScheme SUB_VIDEO VIDEOIDLE 0
-
-      # Disable sleep
-      powercfg -setacvalueindex $newScheme SUB_SLEEP STANDBYIDLE 0
-
-      # Disable hibernation system-wide
-      powercfg -hibernate off
-
-      # Apply the new plan again (just to be sure)
-      powercfg -setactive $newScheme
-
-      Write-Host "`n✅ Power plan 'GamerzOS' created and optimized successfully!"
-      Write-Host "Description: $planDescription" -ForegroundColor Cyan
+          Write-Host "`n✅ Power plan 'GamerzOS' created and optimized successfully!"
+          Write-Host "Description: $planDescription" -ForegroundColor Cyan
