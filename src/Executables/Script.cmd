@@ -1,7 +1,14 @@
 @echo off
 
-powershell -command "&{$p='HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3';$v=(Get-ItemProperty -Path $p).Settings;$v[8]=3;&Set-ItemProperty -Path $p -Name Settings -Value $v;&Stop-Process -f -ProcessName explorer}"
-powershell -Command "Start-Process powershell -ArgumentList '-File "EdgeRemover.ps1" -ExecutionPolicy Bypass' -Verb RunAs"
+$p='HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3'
+$v=(Get-ItemProperty -Path $p).Settings
+$v[8]=3
+Set-ItemProperty -Path $p -Name Settings -Value $v
+Stop-Process -f -ProcessName explorer
+
+powershell -WindowStyle Hidden -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"EdgeRemover.ps1`"' -Verb RunAs -WindowStyle Hidden"
+
+
 
 takeown /s %computername% /u %username% /f "%WinDir%\Users\%username%\AppData\Local\Microsoft\Edge"
 icacls "%WinDir%\Users\%username%\AppData\Local\Microsoft\Edge" /inheritance:r /grant:r %username%:(OI)(CI)F /t /l /q /c
