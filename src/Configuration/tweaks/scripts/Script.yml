@@ -1,6 +1,6 @@
 ---
 title: Script
-description: Script
+description: Extra Scripts
 actions:
   - !cmd:
     command: '"Script.cmd" /silent'
