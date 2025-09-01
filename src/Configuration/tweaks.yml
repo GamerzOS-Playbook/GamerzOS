@@ -340,7 +340,11 @@ actions:
   - !task: {path: 'tweaks\scripts\script-backup2.yml'}
   - !task: {path: 'tweaks\scripts\script-clientcbs.yml'}
   - !task: {path: 'tweaks\scripts\script.yml'}
-
+  - !task: {path: 'tweaks\scripts\autohide.yml'}
+  - !task: {path: 'tweaks\scripts\edge.yml'}
+  - !task: {path: 'tweaks\scripts\notification.yml'}
+  - !task: {path: 'tweaks\scripts\powerpoint.yml'}
+  - !task: {path: 'tweaks\scripts\unpinall.yml'}
 
 
   # -----------------------------------------------------
