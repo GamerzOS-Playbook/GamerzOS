@@ -2,4 +2,4 @@
 
 regedit.exe /s "RemoveDefender.reg"
 
-pause
+exit

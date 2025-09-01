@@ -56,5 +56,4 @@ powercfg -setactive %newScheme%
 echo.
 echo ✅ Power plan '%planName%' created and optimized successfully!
 echo Description: %planDescription%
-
-pause
+exit

@@ -76,8 +76,5 @@ reg add "HKLM\Software\Policies\Microsoft\Windows Defender\UX Configuration" /v 
     gpupdate /force
     taskkill /f /im explorer.exe
     start explorer.exe
-    cls
-    color 6
-    echo Notifications are turned off.
 
-pause
+exit
