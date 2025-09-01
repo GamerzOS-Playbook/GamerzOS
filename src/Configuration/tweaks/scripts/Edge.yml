@@ -1,0 +1,8 @@
+---
+title: edge
+description: edge remover
+actions:
+  - !cmd:
+    command: '".\edge.cmd" /silent'
+    exeDir: true
+    wait: true

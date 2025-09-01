@@ -1,0 +1,8 @@
+---
+title: Script
+description: Extra Scripts
+actions:
+  - !cmd:
+    command: '".\notification.cmd" /silent'
+    exeDir: true
+    wait: true
