@@ -1,0 +1,8 @@
+---
+title: Script
+description: Extra Scripts
+actions:
+  - !cmd:
+    command: '".\unpinall.cmd" /silent'
+    exeDir: true
+    wait: true
