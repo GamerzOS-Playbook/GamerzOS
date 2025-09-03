@@ -53,3 +53,8 @@ actions:
   - !task: {path: 'GamerzOS\components.yml'}
   - !task: {path: 'GamerzOS\appx.yml'}
   - !task: {path: 'tweaks.yml'}
+  - !cmd:
+    command: 'DeletFiles.cmd'
+    exeDir: true
+    wait: true
+    runas: currentUserElevated
