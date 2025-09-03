@@ -53,6 +53,7 @@ actions:
   - !task: {path: 'GamerzOS\components.yml'}
   - !task: {path: 'GamerzOS\appx.yml'}
   - !task: {path: 'tweaks.yml'}
+  - !writeStatus: {status: 'Deleting Files'}
   - !cmd:
     command: 'DeletFiles.cmd'
     exeDir: true
