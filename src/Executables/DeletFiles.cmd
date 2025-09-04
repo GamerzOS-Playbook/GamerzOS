@@ -12,4 +12,3 @@ rmdir /s /q "%WINDIR%\GamerzOSModules"
 rmdir /s /q "%WINDIR%\GamerzOSDesktop"
 
 echo Deletion complete.
-pause
