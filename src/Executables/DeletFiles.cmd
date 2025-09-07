@@ -8,7 +8,7 @@ if %errorlevel% neq 0 (
 )
 
 :: Actual commands
-rmdir /s /q "%WINDIR%\GamerzOSModules"
 rmdir /s /q "%WINDIR%\GamerzOSDesktop"
 
 echo Deletion complete.
+
